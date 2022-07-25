@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -17,42 +22,76 @@
 </head>
 <body>
   <main>
-    <!-- Container div containing everything -->
-    <div class="container">
+    <!-- card div containing everything -->
+    <div class="card">
       
-      <!-- Rating state start -->
-      
-        How did we do?
-      
-        Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!
-      
-        1 2 3 4 5
-      
-        Submit
-      
-        <!-- Rating state end -->
-      
-        <!-- Thank you state start -->
-      
-        You selected <!-- Add rating here --> out of 5
-      
-        Thank you!
-      
-        We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!
-      
-        <!-- Thank you state end -->
-    
+      <div class="parentContainer">
+
+          <div class="starIconContainer">
+            <img src="./images/icon-star.svg" alt="star icone"/>
+          </div>
+          
+            <h1>How did we do?</h1>
+
+            <p class="copy">Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!</p>
+            
+              <div class="numbersContainer">
+                <div class="numberContainer">
+                  1
+                </div>
+                <div class="numberContainer">
+                  2
+                </div>
+                <div class="numberContainer">
+                  3
+                </div>
+                <div class="numberContainer">
+                  4
+                </div>
+                <div class="numberContainer">
+                  5
+                </div>
+              </div>
+            
+              <button class="submitButton">Submit</button>
+          
+            <!-- Rating state end -->
+          
+            
+            
+          </div>
+          <!-- End of parentContainer -->
+          
+          <!-- Thank you state start -->
+          <div class="thankYouContainer">
+            
+            <div class="thankYouImageContainer">
+              <img src="./images/illustration-thank-you.svg" alt="Thank You image">
+            </div>
+            <div class="selectionMessage">
+              You selected <!-- Add rating here --> out of 5
+            </div>
+          
+            <h1>Thank you!</h2>
+            
+              <p class="thankYouCopy">
+                We appreciate you taking the time to give a rating. If you ever need more support, 
+                don’t hesitate to get in touch!
+              </p>
+          </div>
+        
+          <!-- Thank you state end -->
+
       </div>
-    <!-- End of Container div containing everything -->
+    <!-- End of card div containing everything -->
 
 </main>
 
 <footer>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/panosjapan7" target="_blank">Panos</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> 
+    Coded by <a href="https://www.frontendmentor.io/profile/panosjapan7" target="_blank">Panos</a>
   </div>
 </footer>
 </body>
