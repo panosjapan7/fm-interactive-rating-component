@@ -64,6 +64,35 @@ body {
                 letter-spacing: 0.03em;
             }
             
+            label {
+                color: hsl(217, 12%, 63%);
+                font-family: 'Overpass', sans-serif;  
+                font-weight: 500;
+                font-size: 1em;
+
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+                    
+                display: flex;
+                /* justify-content: center; */ /* doesn't work, because the radio (which is invisble), takes up space */
+                align-items: center;
+                    
+                margin-top: 10px;
+                background-color: hsl(214, 19%, 22%);
+            }
+            input {
+                margin-right: 0px;
+                margin-left: 4px;
+            }
+            [type='radio'] {
+                opacity: 0;
+            }
+            .selectedNumber {
+                color: white;
+                background-color: hsl(217, 12%, 63%);
+            }
+
             .numbersContainer {
                 display: flex;
                 justify-content: space-between;
@@ -85,6 +114,11 @@ body {
                     
                     margin-top: 10px;
                     background-color: hsl(214, 19%, 22%);
+                }
+                label:hover {
+                    background-color: hsl(25, 97%, 53%);
+                    color: hsl(0, 0%, 100%);
+                    cursor: pointer;
                 }
                 .numberContainer:hover {
                     background-color: hsl(25, 97%, 53%);
@@ -138,14 +172,16 @@ body {
                 justify-content: center;
                 align-items: center;
 
-
-
                 font-family: 'Overpass', sans-serif;  
                 color: hsl(25, 97%, 53%);
                 font-weight: 500;
                 font-size: 0.7em;
                 letter-spacing: 0.1em;
-            }
+            }   
+                #selectedRating {
+                    margin-right: 3px;
+                    margin-left: 3px;
+                }
             .thankYouCopy {
                 color: hsl(217, 12%, 63%);
                 font-family: 'Overpass', sans-serif;  

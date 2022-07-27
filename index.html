@@ -19,13 +19,14 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <link rel="stylesheet" href="./assets/index.css" />
+  <script type="text/javascript" src="./index.js"></script>
 </head>
 <body>
   <main>
     <!-- card div containing everything -->
     <div class="card">
       
-      <div class="parentContainer">
+      <div class="parentContainer" id="parentContainer">
 
           <div class="starIconContainer">
             <img src="./images/icon-star.svg" alt="star icone"/>
@@ -34,54 +35,86 @@
             <h1>How did we do?</h1>
 
             <p class="copy">Please let us know how we did with your support request. All feedback is appreciated 
-              to help us improve our offering!</p>
+              to help us improve our offering!
+            </p>
             
-              <div class="numbersContainer">
-                <div class="numberContainer">
-                  1
-                </div>
-                <div class="numberContainer">
-                  2
-                </div>
-                <div class="numberContainer">
-                  3
-                </div>
-                <div class="numberContainer">
-                  4
-                </div>
-                <div class="numberContainer">
-                  5
-                </div>
-              </div>
+            <form class="numbersContainer" method="post">
+                <label for="num1">
+                    <input 
+                          type="radio"
+                          id="num1"
+                          name="rating"
+                          value="1"
+                          onclick=postToController()
+                      />
+                    1
+                  </label>
+                  <label for="num2">
+                    <input 
+                          type="radio"
+                          id="num2"
+                          name="rating"
+                          value="2"
+                          onclick=postToController()
+                      />
+                    2
+                  </label>
+                  <label for="num3">
+                    <input 
+                          type="radio"
+                          id="num3"
+                          name="rating"
+                          value="3"
+                          onclick=postToController()
+                      />
+                    3
+                  </label>
+                  <label for="num4">
+                    <input 
+                          type="radio"
+                          id="num4"
+                          name="rating"
+                          value="4"
+                          onclick=postToController()
+                      />
+                    4
+                  </label>
+                  <label for="num5">
+                    <input 
+                          type="radio"
+                          id="num5"
+                          name="rating"
+                          value="5"
+                          onclick=postToController()
+                      />
+                    5
+                  </label>  
+            </form>
+                
+            <button class="submitButton" onclick=onSubmit()>Submit</button>
             
-              <button class="submitButton">Submit</button>
+      </div>
+      <!-- End of parentContainer -->
           
-            <!-- Rating state end -->
-          
-            
-            
-          </div>
-          <!-- End of parentContainer -->
-          
-          <!-- Thank you state start -->
-          <div class="thankYouContainer">
-            
-            <div class="thankYouImageContainer">
-              <img src="./images/illustration-thank-you.svg" alt="Thank You image">
-            </div>
-            <div class="selectionMessage">
-              You selected <!-- Add rating here --> out of 5
-            </div>
-          
-            <h1>Thank you!</h2>
-            
-              <p class="thankYouCopy">
-                We appreciate you taking the time to give a rating. If you ever need more support, 
-                don’t hesitate to get in touch!
-              </p>
-          </div>
+      <!-- Thank you state start -->
+      <div class="thankYouContainer" id="thankYouContainer">
         
-          <!-- Thank you state end -->
+        <div class="thankYouImageContainer">
+          <img src="./images/illustration-thank-you.svg" alt="Thank You image">
+        </div>
+        <div class="selectionMessage">
+          You selected <span id="selectedRating"></span> out of 5
+        </div>
+      
+        <h1>Thank you!</h2>
+        
+          <p class="thankYouCopy">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+      </div>
+
+      <!-- Thank you state end -->
 
       </div>
     <!-- End of card div containing everything -->
