@@ -190,9 +190,6 @@ body {
                 letter-spacing: 0.03em;
                 text-align: center;
             }
-        
-
-    
     
    /* Footer  */
     .attribution {
@@ -201,3 +198,13 @@ body {
         font-size: 0.8em;
         word-spacing: 0.1em;
     }
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .card {
+        width: 330px;
+        height: 380px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
